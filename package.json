@@ -1,0 +1,47 @@
+{
+  "name": "repokeeper",
+  "version": "1.0.0",
+  "description": "Declaratively define and lint the file and directory structure of a repository",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "bin/cli.js",
+  "bin": {
+    "repokeeper": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "eslint bin lib test && tap --no-coverage --reporter=spec --jobs=1 test/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jviotti/repokeeper.git"
+  },
+  "keywords": [
+    "repository",
+    "directory",
+    "layout",
+    "structure",
+    "linter",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/jviotti/repokeeper/issues"
+  },
+  "author": "Juan Cruz Viotti <jv@jviotti.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "lodash.difference": "^4.5.0",
+    "minimist": "^1.2.5",
+    "tabula": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "tap": "^14.10.8"
+  }
+}
