@@ -73,15 +73,21 @@ if (ARGV_PRINT_RULES) {
   process.exit(0)
 }
 
-console.error('traversing directory structure')
+console.error('traversing directory structure...')
 const ALL_FILES = filesystem.recursiveReaddir(ARGV_DIRECTORY).map((file) => {
   return path.relative(ARGV_DIRECTORY, file)
 })
 
-console.error('checking file and directory rules')
+console.error('checking file and directory rules...')
 const MATCHED_FILES = PARSED_RULES.reduce((accumulator, rule) => {
   accumulator.push(...glob(ARGV_DIRECTORY, rule.pattern))
   return accumulator
 }, [])
 
-console.log(difference(ALL_FILES, MATCHED_FILES))
+const DIFFERENCE = difference(ALL_FILES, MATCHED_FILES)
+if (DIFFERENCE.length === 0) {
+  console.error('repository looks good')
+  process.exit(0)
+}
+
+console.log(DIFFERENCE)

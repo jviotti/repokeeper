@@ -10,7 +10,7 @@
     "repokeeper": "./bin/cli.js"
   },
   "scripts": {
-    "test": "eslint bin lib test && tap --no-coverage --reporter=spec --jobs=1 test/*.spec.js"
+    "test": "eslint bin lib test && shellcheck test/cli-rules/runner.sh && tap --no-coverage --reporter=spec --jobs=1 test/*.spec.js"
   },
   "repository": {
     "type": "git",
