@@ -6,8 +6,13 @@ SUITE="test/cli-rules"
 TMP="$PWD/.tmp"
 mkdir -p "$TMP"
 
-for test_case in $(find "$SUITE" -type d -depth 1)
+for test_case in "$SUITE"/*
 do
+  if [ ! -d "$test_case" ]
+  then
+    continue
+  fi
+
   echo "================================="
   echo "TEST CASE: $test_case"
   echo "================================="

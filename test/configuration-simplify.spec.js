@@ -106,28 +106,12 @@ tap.test('should simplify a non-matching conditional rule with a file placeholde
 tap.test('should simplify a matching conditional rule with a directory placeholder', async (test) => {
   const result = configuration.simplifyRules(DIRECTORY,
     configuration.parseConfiguration(`
-      %/ => example/%/
+      test/%/ => example/%/
     `))
 
   test.strictSame(result, [
     {
-      pattern: 'example/.git/',
-      line: 2
-    },
-    {
-      pattern: 'example/bin/',
-      line: 2
-    },
-    {
-      pattern: 'example/lib/',
-      line: 2
-    },
-    {
-      pattern: 'example/node_modules/',
-      line: 2
-    },
-    {
-      pattern: 'example/test/',
+      pattern: 'example/cli-rules/',
       line: 2
     }
   ])
