@@ -1,0 +1,2 @@
+1 node bin/cli.js --directory . --configuration foobarbaz
+configuration file does not exist: foobarbaz

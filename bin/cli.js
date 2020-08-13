@@ -15,6 +15,16 @@
  * limitations under the License.
  */
 
+process.on('uncaughtException', (error) => {
+  if (error.code === 'ENOENT') {
+    console.error(`configuration file does not exist: ${error.path}`)
+  } else {
+    console.error(error)
+  }
+
+  process.exit(1)
+})
+
 const fs = require('fs')
 const path = require('path')
 const tabula = require('tabula')
@@ -58,19 +68,24 @@ if (ARGV_HELP) {
 }
 
 if (!ARGV_CONFIG) {
-  printHelp()
+  if (Object.keys(argv).length > 1) {
+    console.error('missing configuration option')
+  } else {
+    printHelp()
+  }
+
   process.exit(1)
 }
 
-console.error(`using configuration file: ${ARGV_CONFIG}`)
 const RULES = fs.readFileSync(ARGV_CONFIG, 'utf8')
+console.error(`using configuration file: ${ARGV_CONFIG}`)
 
 const PARSED_RULES =
   configuration.simplifyRules(
     ARGV_DIRECTORY, configuration.parseConfiguration(RULES))
 
 if (ARGV_PRINT_RULES) {
-  console.error('printing detected rules')
+  console.error('printing detected rules...')
   tabula(PARSED_RULES.map((rule) => {
     rule.line = `(${rule.line})`
     return rule

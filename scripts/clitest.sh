@@ -12,7 +12,7 @@ fi
 
 for definition in $ARGV_TESTS
 do
-  echo "#### $definition"
+  echo "$definition"
 
   command="$(head -n 1 "$definition" | cut -f 2- -d ' ')"
   set +e
@@ -36,6 +36,4 @@ do
     echo "Expected exit code $expected_code. Got $code" 1>&2
     exit 1
   fi
-
-  echo ">>>> PASS"
 done

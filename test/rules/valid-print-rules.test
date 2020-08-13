@@ -1,0 +1,17 @@
+0 node bin/cli.js --directory . --configuration test/rules/valid.config --print-rules
+using configuration file: test/rules/valid.config
+printing detected rules...
+(1)   bin/cli.js
+(2)   lib/*.js
+(3)   test/**/*.spec.js
+(4)   test/cli-rules/*/{config,expected}
+(5)   test/cli-rules/runner.sh
+(6)   .*
+(7)   *.md
+(8)   LICENSE
+(9)   package*.json
+(10)  test/rules/*
+(11)  scripts/*.sh
+(14)  .git/**/*
+(15)  .tmp/**/*
+(16)  node_modules/**/*
