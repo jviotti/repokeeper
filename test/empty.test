@@ -1,0 +1,3 @@
+0 node bin/cli.js --directory . --configuration test/empty.config --print-rules
+using configuration file: test/empty.config
+printing detected rules...

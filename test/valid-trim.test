@@ -1,9 +1,9 @@
-0 node bin/cli.js --directory . --configuration test/rules/valid-trim.config --print-rules
-using configuration file: test/rules/valid-trim.config
+0 node bin/cli.js --directory . --configuration test/valid-trim.config --print-rules
+using configuration file: test/valid-trim.config
 printing detected rules...
 (1)   bin/cli.js
 (2)   lib/*.js
-(6)   test/rules/*.{test,config}
+(6)   test/*.{test,config}
 (11)  test/**/*.spec.js
 (12)  .*
 (13)  *.md

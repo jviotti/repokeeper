@@ -1,0 +1,3 @@
+0 node bin/cli.js --directory . --configuration test/non-matching-conditional-placeholder-2.config --print-rules
+using configuration file: test/non-matching-conditional-placeholder-2.config
+printing detected rules...

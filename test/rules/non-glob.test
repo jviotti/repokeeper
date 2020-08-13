@@ -1,5 +1,0 @@
-0 node bin/cli.js --directory . --configuration test/rules/non-glob.config --print-rules
-using configuration file: test/rules/non-glob.config
-printing detected rules...
-(1)   LICENSE
-(2)   README.md

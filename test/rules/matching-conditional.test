@@ -1,4 +1,0 @@
-0 node bin/cli.js --directory . --configuration test/rules/matching-conditional.config --print-rules
-using configuration file: test/rules/matching-conditional.config
-printing detected rules...
-(1)   test/*.spec.js

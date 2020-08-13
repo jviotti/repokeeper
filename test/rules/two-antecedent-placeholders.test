@@ -1,3 +1,0 @@
-1 node bin/cli.js --directory . --configuration test/rules/two-antecedent-placeholders.config
-using configuration file: test/rules/two-antecedent-placeholders.config
-line 1: conditional antecedents must have a single placeholder symbol
