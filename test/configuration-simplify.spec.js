@@ -111,7 +111,7 @@ tap.test('should simplify a matching conditional rule with a directory placehold
 
   test.strictSame(result, [
     {
-      pattern: 'example/cli-rules/',
+      pattern: 'example/rules/',
       line: 2
     }
   ])
