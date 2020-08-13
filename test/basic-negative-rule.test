@@ -1,0 +1,4 @@
+0 node lib/index.js --directory . --configuration test/basic-negative-rule.config --print-rules
+using configuration file: test/basic-negative-rule.config
+printing detected rules...
+(1)   !test/*.js
