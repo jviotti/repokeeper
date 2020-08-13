@@ -10,7 +10,7 @@
     "repokeeper": "./lib/index.js"
   },
   "scripts": {
-    "test": "eslint lib && shellcheck scripts/*.sh && ./scripts/test.sh test/*.test"
+    "test": "eslint lib && shellcheck scripts/*.sh && ./scripts/test.sh test/*.test && node lib/index --directory . --configuration .repokeeperrc"
   },
   "repository": {
     "type": "git",

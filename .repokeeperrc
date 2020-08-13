@@ -1,0 +1,19 @@
+# source code
+lib/*.js
+test/*.test
+test/%.test => test/%.config
+scripts/*.sh
+
+# top-level files
+package-lock.json
+package.json
+CODE_OF_CONDUCT.md
+LICENSE
+.repokeeperrc
+.gitignore
+.eslintrc.yml
+.editorconfig
+
+# .gitignore
+.git/**/*
+node_modules/**/*
