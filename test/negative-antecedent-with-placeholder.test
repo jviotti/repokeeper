@@ -1,3 +1,3 @@
 1 node lib/index.js --directory . --configuration test/negative-antecedent-with-placeholder.config
 using configuration file: test/negative-antecedent-with-placeholder.config
-ERROR: line 1: placeholder antecedents must not be negative patterns
+ERROR: (test/negative-antecedent-with-placeholder.config:1): placeholder antecedents must not be negative patterns
