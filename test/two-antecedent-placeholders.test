@@ -1,3 +1,3 @@
 1 node lib/index.js --directory . --configuration test/two-antecedent-placeholders.config
 using configuration file: test/two-antecedent-placeholders.config
-line 1: conditional antecedents must have a single placeholder symbol
+ERROR: line 1: conditional antecedents must have a single placeholder symbol

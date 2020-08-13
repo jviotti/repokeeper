@@ -1,3 +1,3 @@
 1 node lib/index.js --directory . --configuration test/conditional-no-antecedent.config --print-rules
 using configuration file: test/conditional-no-antecedent.config
-line 1: missing conditional antecedent
+ERROR: line 1: missing conditional antecedent

@@ -1,2 +1,2 @@
 1 node lib/index.js --directory .
-missing configuration option
+ERROR: missing configuration option

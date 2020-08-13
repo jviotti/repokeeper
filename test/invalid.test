@@ -1,0 +1,9 @@
+0 node lib/index.js --directory . --configuration test/invalid.config
+using configuration file: test/invalid.config
+traversing directory structure...
+checking file and directory rules...
+
+ERROR: the following files must not exist:
+
+LICENSE
+scripts/test.sh

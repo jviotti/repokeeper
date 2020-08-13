@@ -1,2 +1,2 @@
 1 node lib/index.js --directory . --configuration foobarbaz
-configuration file does not exist: foobarbaz
+ERROR: configuration file does not exist: foobarbaz
