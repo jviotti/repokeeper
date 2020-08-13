@@ -1,8 +1,8 @@
 0 node lib/index.js --directory . --configuration test/matching-conditional-placeholder-2.config --print-rules
 using configuration file: test/matching-conditional-placeholder-2.config
 printing detected rules...
-(1)   example/.git/
-(1)   example/lib/
-(1)   example/node_modules/
-(1)   example/scripts/
-(1)   example/test/
+(test/matching-conditional-placeholder-2.config:1)  example/.git/
+(test/matching-conditional-placeholder-2.config:1)  example/lib/
+(test/matching-conditional-placeholder-2.config:1)  example/node_modules/
+(test/matching-conditional-placeholder-2.config:1)  example/scripts/
+(test/matching-conditional-placeholder-2.config:1)  example/test/

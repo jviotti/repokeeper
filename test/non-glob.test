@@ -1,5 +1,5 @@
 0 node lib/index.js --directory . --configuration test/non-glob.config --print-rules
 using configuration file: test/non-glob.config
 printing detected rules...
-(1)   LICENSE
-(2)   README.md
+(test/non-glob.config:1)  LICENSE
+(test/non-glob.config:2)  README.md

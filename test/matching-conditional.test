@@ -1,4 +1,4 @@
 0 node lib/index.js --directory . --configuration test/matching-conditional.config --print-rules
 using configuration file: test/matching-conditional.config
 printing detected rules...
-(1)   test/*.spec.js
+(test/matching-conditional.config:1)  test/*.spec.js
