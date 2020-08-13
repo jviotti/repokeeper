@@ -5,5 +5,6 @@ checking file and directory rules...
 
 ERROR: the following files must not exist:
 
+scripts/test.sh
 test/non-matching-negative-rules.config
 test/non-matching-negative-rules.test
