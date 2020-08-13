@@ -1,0 +1,9 @@
+1 node lib/index.js --directory . --configuration test/non-matching-negative-rules.config
+using configuration file: test/non-matching-negative-rules.config
+traversing directory structure...
+checking file and directory rules...
+
+ERROR: the following files must not exist:
+
+test/non-matching-negative-rules.config
+test/non-matching-negative-rules.test
