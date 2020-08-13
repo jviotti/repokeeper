@@ -20,44 +20,6 @@ const configuration = require('../lib/configuration')
 const errors = require('../lib/errors')
 const DIRECTORY = path.resolve(__dirname, '..')
 
-tap.test('should simplify a basic rule', async (test) => {
-  const result = configuration.simplifyRules(DIRECTORY,
-    configuration.parseConfiguration(`
-      lib/*.js
-    `))
-
-  test.strictSame(result, [
-    {
-      pattern: 'lib/*.js',
-      line: 2
-    }
-  ])
-
-  test.end()
-})
-
-// eslint-disable-next-line max-len
-tap.test('should simplify a non-matching conditional rule with a file placeholder', async (test) => {
-  const result = configuration.simplifyRules(DIRECTORY,
-    configuration.parseConfiguration(`
-      lib/%.xxxxx.js => test/%.spec.js
-    `))
-
-  test.strictSame(result, [])
-  test.end()
-})
-
-// eslint-disable-next-line max-len
-tap.test('should simplify a non-matching conditional rule with a file placeholder', async (test) => {
-  const result = configuration.simplifyRules(DIRECTORY,
-    configuration.parseConfiguration(`
-      lib/foo/%.js => test/%.spec.js
-    `))
-
-  test.strictSame(result, [])
-  test.end()
-})
-
 // eslint-disable-next-line max-len
 tap.test('should reject an antecedent with more than one placeholder', async (test) => {
   const ast = configuration.parseConfiguration(`
