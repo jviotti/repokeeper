@@ -1,2 +1,2 @@
-0 node bin/cli.js -v
+0 node lib/index.js -v
 repokeeper 1.0.0

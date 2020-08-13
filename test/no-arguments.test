@@ -1,4 +1,4 @@
-1 node bin/cli.js
+1 node lib/index.js
 Usage: repokeeper [options]
 
 Options

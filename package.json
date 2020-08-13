@@ -5,12 +5,12 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "main": "bin/cli.js",
+  "main": "lib/index.js",
   "bin": {
-    "repokeeper": "./bin/cli.js"
+    "repokeeper": "./lib/index.js"
   },
   "scripts": {
-    "test": "eslint bin lib && shellcheck scripts/*.sh && ./scripts/test.sh test/*.test"
+    "test": "eslint lib && shellcheck scripts/*.sh && ./scripts/test.sh test/*.test"
   },
   "repository": {
     "type": "git",

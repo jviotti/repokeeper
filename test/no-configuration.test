@@ -1,2 +1,2 @@
-1 node bin/cli.js --directory .
+1 node lib/index.js --directory .
 missing configuration option

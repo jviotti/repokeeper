@@ -1,14 +1,13 @@
-0 node bin/cli.js --directory . --configuration test/valid.config --print-rules
+0 node lib/index.js --directory . --configuration test/valid.config --print-rules
 using configuration file: test/valid.config
 printing detected rules...
-(1)   bin/cli.js
-(2)   lib/*.js
-(3)   .*
-(4)   *.md
-(5)   LICENSE
-(6)   package*.json
-(7)   test/*.{test,config}
-(8)   scripts/*.sh
-(11)  .git/**/*
-(12)  .tmp/**/*
-(13)  node_modules/**/*
+(1)   lib/*.js
+(2)   .*
+(3)   *.md
+(4)   LICENSE
+(5)   package*.json
+(6)   test/*.{test,config}
+(7)   scripts/*.sh
+(10)  .git/**/*
+(11)  .tmp/**/*
+(12)  node_modules/**/*

@@ -1,4 +1,4 @@
-0 node bin/cli.js --directory . --configuration test/comments.config --print-rules
+0 node lib/index.js --directory . --configuration test/comments.config --print-rules
 using configuration file: test/comments.config
 printing detected rules...
 (2)   lib/*.js

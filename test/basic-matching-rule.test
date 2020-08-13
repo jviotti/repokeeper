@@ -1,4 +1,4 @@
-0 node bin/cli.js --directory . --configuration test/basic-matching-rule.config --print-rules
+0 node lib/index.js --directory . --configuration test/basic-matching-rule.config --print-rules
 using configuration file: test/basic-matching-rule.config
 printing detected rules...
 (1)   lib/*.js
