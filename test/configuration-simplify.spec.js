@@ -36,61 +36,6 @@ tap.test('should simplify a basic rule', async (test) => {
   test.end()
 })
 
-tap.test('should simplify a matching conditional rule', async (test) => {
-  const result = configuration.simplifyRules(DIRECTORY,
-    configuration.parseConfiguration(`
-      lib/*.js => test/*.spec.js
-    `))
-
-  test.strictSame(result, [
-    {
-      pattern: 'test/*.spec.js',
-      line: 2
-    }
-  ])
-
-  test.end()
-})
-
-tap.test('should simplify a non-matching conditional rule', async (test) => {
-  const result = configuration.simplifyRules(DIRECTORY,
-    configuration.parseConfiguration(`
-      foobar/*.js => test/*.spec.js
-    `))
-
-  test.strictSame(result, [])
-  test.end()
-})
-
-// eslint-disable-next-line max-len
-tap.test('should simplify a matching conditional rule with a file placeholder', async (test) => {
-  const result = configuration.simplifyRules(DIRECTORY,
-    configuration.parseConfiguration(`
-      lib/%.js => test/%.spec.js
-    `))
-
-  test.strictSame(result, [
-    {
-      pattern: 'test/configuration.spec.js',
-      line: 2
-    },
-    {
-      pattern: 'test/errors.spec.js',
-      line: 2
-    },
-    {
-      pattern: 'test/filesystem.spec.js',
-      line: 2
-    },
-    {
-      pattern: 'test/glob.spec.js',
-      line: 2
-    }
-  ])
-
-  test.end()
-})
-
 // eslint-disable-next-line max-len
 tap.test('should simplify a non-matching conditional rule with a file placeholder', async (test) => {
   const result = configuration.simplifyRules(DIRECTORY,
@@ -103,23 +48,6 @@ tap.test('should simplify a non-matching conditional rule with a file placeholde
 })
 
 // eslint-disable-next-line max-len
-tap.test('should simplify a matching conditional rule with a directory placeholder', async (test) => {
-  const result = configuration.simplifyRules(DIRECTORY,
-    configuration.parseConfiguration(`
-      test/%/ => example/%/
-    `))
-
-  test.strictSame(result, [
-    {
-      pattern: 'example/rules/',
-      line: 2
-    }
-  ])
-
-  test.end()
-})
-
-// eslint-disable-next-line max-len
 tap.test('should simplify a non-matching conditional rule with a file placeholder', async (test) => {
   const result = configuration.simplifyRules(DIRECTORY,
     configuration.parseConfiguration(`
@@ -127,35 +55,6 @@ tap.test('should simplify a non-matching conditional rule with a file placeholde
     `))
 
   test.strictSame(result, [])
-  test.end()
-})
-
-// eslint-disable-next-line max-len
-tap.test('should simplify a matching conditional rule with consequence placeholders', async (test) => {
-  const result = configuration.simplifyRules(DIRECTORY,
-    configuration.parseConfiguration(`
-      lib/%.js => test/%/%.spec.js
-    `))
-
-  test.strictSame(result, [
-    {
-      pattern: 'test/configuration/configuration.spec.js',
-      line: 2
-    },
-    {
-      pattern: 'test/errors/errors.spec.js',
-      line: 2
-    },
-    {
-      pattern: 'test/filesystem/filesystem.spec.js',
-      line: 2
-    },
-    {
-      pattern: 'test/glob/glob.spec.js',
-      line: 2
-    }
-  ])
-
   test.end()
 })
 

@@ -1,0 +1,3 @@
+0 node bin/cli.js --directory . --configuration test/rules/non-matching-conditional.config --print-rules
+using configuration file: test/rules/non-matching-conditional.config
+printing detected rules...
