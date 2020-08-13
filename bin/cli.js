@@ -15,9 +15,13 @@
  * limitations under the License.
  */
 
+const errors = require('../lib/errors')
+
 process.on('uncaughtException', (error) => {
   if (error.code === 'ENOENT') {
     console.error(`configuration file does not exist: ${error.path}`)
+  } else if (error instanceof errors.InvalidConfigurationLine) {
+    console.error(`line ${error.lineNumber}:`, error.message)
   } else {
     console.error(error)
   }
