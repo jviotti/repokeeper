@@ -1,0 +1,14 @@
+0 node bin/cli.js -h
+Usage: repokeeper [options]
+
+Options
+    -v, --version                print version and exit
+    -h, --help                   print help and exit
+    -p, --print-rules            print rules and exit
+                                 for debugging purposes
+    -d, --directory <directory>  set project directory
+                                 defaults to current directory
+    -c, --configuration <file>   set configuration file
+
+Example
+    repokeeper -d my/project -c .repokeeperrc

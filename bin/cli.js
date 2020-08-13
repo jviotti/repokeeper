@@ -32,12 +32,7 @@ const ARGV_VERSION = Boolean(argv.version || argv.v)
 const ARGV_HELP = Boolean(argv.help || argv.h)
 const ARGV_DIRECTORY = argv.directory || argv.d || process.cwd()
 
-if (ARGV_VERSION) {
-  console.log(packageJSON.name, packageJSON.version)
-  process.exit(0)
-}
-
-if (ARGV_HELP) {
+const printHelp = () => {
   console.error(`Usage: ${packageJSON.name} [options]\n`)
   console.error('Options')
   console.error('    -v, --version                print version and exit')
@@ -50,7 +45,21 @@ if (ARGV_HELP) {
   console.error('    -c, --configuration <file>   set configuration file')
   console.error('\nExample')
   console.error(`    ${packageJSON.name} -d my/project -c .repokeeperrc`)
+}
+
+if (ARGV_VERSION) {
+  console.log(packageJSON.name, packageJSON.version)
   process.exit(0)
+}
+
+if (ARGV_HELP) {
+  printHelp()
+  process.exit(0)
+}
+
+if (!ARGV_CONFIG) {
+  printHelp()
+  process.exit(1)
 }
 
 console.error(`using configuration file: ${ARGV_CONFIG}`)
