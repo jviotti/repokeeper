@@ -100,76 +100,6 @@ tap.test('should trim patterns', async (test) => {
   test.end()
 })
 
-tap.test('should ignore comments', async (test) => {
-  const result = configuration.parseConfiguration(`
-    # foo
-    lib/*.js
-    # bar
-    test/*.spec.js
-  `)
-
-  test.strictSame(result, [
-    {
-      line: 3,
-      antecedent: 'lib/*.js',
-      consequence: null
-    },
-    {
-      line: 5,
-      antecedent: 'test/*.spec.js',
-      consequence: null
-    }
-  ])
-
-  test.end()
-})
-
-tap.test('should trim comments', async (test) => {
-  const result = configuration.parseConfiguration(`
-       # foo
-    lib/*.js
-    \t  # bar
-    test/*.spec.js
-  `)
-
-  test.strictSame(result, [
-    {
-      line: 3,
-      antecedent: 'lib/*.js',
-      consequence: null
-    },
-    {
-      line: 5,
-      antecedent: 'test/*.spec.js',
-      consequence: null
-    }
-  ])
-
-  test.end()
-})
-
-tap.test('should ignore suffix comments', async (test) => {
-  const result = configuration.parseConfiguration(`
-    lib/*.js # bar
-    test/*.spec.js#baz
-  `)
-
-  test.strictSame(result, [
-    {
-      line: 2,
-      antecedent: 'lib/*.js',
-      consequence: null
-    },
-    {
-      line: 3,
-      antecedent: 'test/*.spec.js',
-      consequence: null
-    }
-  ])
-
-  test.end()
-})
-
 tap.test('should parse a pattern with a placeholder', async (test) => {
   const result = configuration.parseConfiguration(`
     lib/%.js
@@ -217,23 +147,6 @@ tap.test('should trim conditional patterns', async (test) => {
 
   test.end()
 })
-
-tap.test(
-  'should not allow comments before conditional symbol', async (test) => {
-    const result = configuration.parseConfiguration(`
-      lib/*.js # foo => test/*.js
-    `)
-
-    test.strictSame(result, [
-      {
-        line: 2,
-        antecedent: 'lib/*.js',
-        consequence: null
-      }
-    ])
-
-    test.end()
-  })
 
 tap.test('should reject conditionals without an antecedent', async (test) => {
   const contents = [
