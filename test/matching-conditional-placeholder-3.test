@@ -7,4 +7,5 @@ printing detected rules...
 (test/matching-conditional-placeholder-3.config:1)  test/glob/glob.spec.js
 (test/matching-conditional-placeholder-3.config:1)  test/index/index.spec.js
 (test/matching-conditional-placeholder-3.config:1)  test/parser/parser.spec.js
+(test/matching-conditional-placeholder-3.config:1)  test/placeholders/placeholders.spec.js
 (.gitignore:1)                                      node_modules/**/*
