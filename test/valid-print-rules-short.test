@@ -8,6 +8,5 @@ printing detected rules...
 (test/valid.config:5)   package*.json
 (test/valid.config:6)   test/*.{test,config}
 (test/valid.config:7)   scripts/*.sh
-(test/valid.config:10)  .git/**/*
-(test/valid.config:11)  .tmp/**/*
-(test/valid.config:12)  node_modules/**/*
+(test/valid.config:10)  .tmp/**/*
+(test/valid.config:11)  node_modules/**/*

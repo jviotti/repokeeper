@@ -15,5 +15,4 @@ LICENSE
 .editorconfig
 
 # .gitignore
-.git/**/*
 node_modules/**/*

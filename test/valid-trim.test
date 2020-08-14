@@ -9,6 +9,5 @@ printing detected rules...
 (test/valid-trim.config:13)  LICENSE
 (test/valid-trim.config:14)  package*.json
 (test/valid-trim.config:15)  scripts/*.sh
-(test/valid-trim.config:18)  .git/**/*
-(test/valid-trim.config:19)  .tmp/**/*
-(test/valid-trim.config:20)  node_modules/**/*
+(test/valid-trim.config:18)  .tmp/**/*
+(test/valid-trim.config:19)  node_modules/**/*
