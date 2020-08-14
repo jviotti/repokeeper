@@ -9,4 +9,4 @@ printing detected rules...
 (test/valid.config:6)   test/*.{test,config}
 (test/valid.config:7)   scripts/*.sh
 (test/valid.config:10)  .tmp/**/*
-(.gitignore:1)          node_modules/**/*
+(test/valid.config:11)  node_modules/**/*

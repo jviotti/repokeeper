@@ -1,4 +1,3 @@
 0 node lib/index.js --directory . --configuration test/empty.config --print-rules
 using configuration file: test/empty.config
 printing detected rules...
-(.gitignore:1)  node_modules/**/*

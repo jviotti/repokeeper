@@ -2,4 +2,3 @@
 using configuration file: test/basic-matching-rule.config
 printing detected rules...
 (test/basic-matching-rule.config:1)  lib/*.js
-(.gitignore:1)                       node_modules/**/*

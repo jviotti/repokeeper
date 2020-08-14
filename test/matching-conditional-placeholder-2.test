@@ -5,4 +5,3 @@ printing detected rules...
 (test/matching-conditional-placeholder-2.config:1)  example/node_modules/
 (test/matching-conditional-placeholder-2.config:1)  example/scripts/
 (test/matching-conditional-placeholder-2.config:1)  example/test/
-(.gitignore:1)                                      node_modules/**/*

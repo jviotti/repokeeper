@@ -10,4 +10,3 @@ printing detected rules...
 (test/valid-trim.config:14)  package*.json
 (test/valid-trim.config:15)  scripts/*.sh
 (test/valid-trim.config:18)  .tmp/**/*
-(.gitignore:1)               node_modules/**/*
