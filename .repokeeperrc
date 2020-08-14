@@ -1,5 +1,6 @@
 # source code
 lib/*.js
+lib/pipeline/*.js
 test/*.test
 test/%.test => test/%.config
 scripts/*.sh

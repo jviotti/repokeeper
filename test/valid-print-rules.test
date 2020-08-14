@@ -1,7 +1,7 @@
 0 node lib/index.js --directory . --configuration test/valid.config --print-rules
 using configuration file: test/valid.config
 printing detected rules...
-(test/valid.config:1)   lib/*.js
+(test/valid.config:1)   lib/**/*.js
 (test/valid.config:2)   .*
 (test/valid.config:3)   *.md
 (test/valid.config:4)   LICENSE

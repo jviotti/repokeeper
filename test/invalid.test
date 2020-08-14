@@ -6,4 +6,7 @@ checking file and directory rules...
 ERROR: the following files must not exist:
 
 LICENSE
+lib/pipeline/conditionals.js
+lib/pipeline/parser.js
+lib/pipeline/placeholders.js
 scripts/test.sh

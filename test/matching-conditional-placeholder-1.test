@@ -1,10 +1,7 @@
 0 node lib/index.js --directory . --configuration test/matching-conditional-placeholder-1.config --print-rules
 using configuration file: test/matching-conditional-placeholder-1.config
 printing detected rules...
-(test/matching-conditional-placeholder-1.config:1)  test/conditionals.spec.js
 (test/matching-conditional-placeholder-1.config:1)  test/errors.spec.js
 (test/matching-conditional-placeholder-1.config:1)  test/filesystem.spec.js
 (test/matching-conditional-placeholder-1.config:1)  test/glob.spec.js
 (test/matching-conditional-placeholder-1.config:1)  test/index.spec.js
-(test/matching-conditional-placeholder-1.config:1)  test/parser.spec.js
-(test/matching-conditional-placeholder-1.config:1)  test/placeholders.spec.js
