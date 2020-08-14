@@ -2,3 +2,4 @@
 using configuration file: test/basic-negative-rule.config
 printing detected rules...
 (test/basic-negative-rule.config:1)  !test/*.js
+(.gitignore:1)                       node_modules/**/*

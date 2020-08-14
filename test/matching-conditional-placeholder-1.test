@@ -6,3 +6,4 @@ printing detected rules...
 (test/matching-conditional-placeholder-1.config:1)  test/filesystem.spec.js
 (test/matching-conditional-placeholder-1.config:1)  test/glob.spec.js
 (test/matching-conditional-placeholder-1.config:1)  test/index.spec.js
+(.gitignore:1)                                      node_modules/**/*

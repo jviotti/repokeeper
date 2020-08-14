@@ -13,6 +13,3 @@ LICENSE
 .gitignore
 .eslintrc.yml
 .editorconfig
-
-# .gitignore
-node_modules/**/*

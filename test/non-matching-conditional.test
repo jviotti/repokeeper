@@ -1,3 +1,4 @@
 0 node lib/index.js --directory . --configuration test/non-matching-conditional.config --print-rules
 using configuration file: test/non-matching-conditional.config
 printing detected rules...
+(.gitignore:1)  node_modules/**/*

@@ -2,3 +2,4 @@
 using configuration file: test/matching-conditional.config
 printing detected rules...
 (test/matching-conditional.config:1)  test/*.spec.js
+(.gitignore:1)                        node_modules/**/*

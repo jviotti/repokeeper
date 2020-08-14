@@ -5,3 +5,4 @@ printing detected rules...
 (test/comments.config:5)  test/*.spec.js
 (test/comments.config:6)  bin/*.js
 (test/comments.config:7)  test/*.test
+(.gitignore:1)            node_modules/**/*
