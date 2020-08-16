@@ -1,20 +1,35 @@
 # source code
+
+# Allow any JavaScript file immediately inside lib/
 lib/*.js
+
+# Allow any JavaScript file inside a lib/pipeline/ directory
 lib/pipeline/*.js
+
+# Allow any file with a *.test extension inside test/
 test/*.test
+
+# Allow files ending with *.config if there is a
+# corresponding file ending with *.test.
 test/%.test => test/%.config
+
+# Allow any shell scripts inside scripts/
 scripts/*.sh
 
-# top-level files
+# Allow the typical Node.js related config files
 package-lock.json
 package.json
-CODE_OF_CONDUCT.md
-LICENSE
-.repokeeperrc
-.gitignore
 .eslintrc.yml
 .editorconfig
-
-# gitignore
 node_modules/**/*
+
+# Allow various typical GitHub files
+CODE_OF_CONDUCT.md
+LICENSE
+
+# Allow repokeeper's config file
+.repokeeperrc
+
+# Allow typicall git related files
+.gitignore
 .git/**/*

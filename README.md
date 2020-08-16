@@ -33,12 +33,28 @@ developers*, and it should be treated as such.
 Installation
 ------------
 
-XXX
+You can install `repokeeper` through `npm`:
+
+```
+npm install -g repokeeper
+```
 
 Example
 -------
 
-XXX
+Check out the
+[`.repokeeperrc`](https://github.com/jviotti/repokeeper/blob/master/.repokeeperrc)
+configuration file that `repokeeper` itself uses, which includes tons of
+explanatory comments.
+
+You can run `repokeeper` on `repokeeper` by executing the following commands:
+
+```sh
+git clone https://github.com/jviotti/repokeeper
+cd repokeeper
+npm install -g .
+repokeeper --configuration .repokeeperrc
+```
 
 Configuration
 -------------
@@ -46,8 +62,8 @@ Configuration
 The command-line tool takes a configuration file that defines the desired file
 and directory structure through a whitelisting approach. The configuration file
 resembles [`.gitignore`](https://git-scm.com/docs/gitignore). Each non-empty
-line is either a comment (starting with `#`) or a expression that represents a
-set of files that are considered valid. For example:
+line is either a comment (starting with `#`) or a rule that represents a set of
+files that are considered valid. For example:
 
 ```
 lib/**/*.js
@@ -57,18 +73,20 @@ LICENSE
 package*.json
 ```
 
-Expressions have the following form:
+Rules have the following form:
 
-- `PATTERN`: A simple expression. Any project file that matches `PATTERN` is
-  considered valid. For example: `lib/*.js`, `lib/**/*.js`, `.*`
-- `PATTERN_A => PATTERN_B`: A conditional expression. If the project has any
+- `PATTERN`: A simple rule. Any project file that matches `PATTERN` is
+  considered *valid*. For example: `lib/*.js`, `lib/**/*.js`, `.*`
+- `!PATTERN`: A negative rule. Any project file that matches `!PATTERN`
+  is considered *invalid*. For example: `!lib/*.ts`, `!*.o`
+- `PATTERN_A => PATTERN_B`: A conditional rule. If the project has any
   files matching `PATTERN_A`, then any project file that matches `PATTERN_B` is
   considered valid. For example: `lib/*.js => test/*.js`
 
-Conditional expressions support the `%` placeholder symbol. If a conditional
-expression antecedent contains the `%` symbol, then any occurence of the `%`
-symbol in the conditional consequence is replaced by the value of `%` when
-executing the antecedent expression. For example, consider the following rule:
+Conditional rules support the `%` placeholder symbol. If a conditional rule
+antecedent contains the `%` symbol, then any occurence of the `%` symbol in the
+conditional consequence is replaced by the value of `%` when executing the
+antecedent expression. For example, consider the following rule:
 
 ```
 lib/%.js => test/%.spec.js
@@ -83,6 +101,21 @@ lib/bar.js => test/bar.spec.js
 ```
 
 Placeholders are useful to create mirrored directories.
+
+Future work
+-----------
+
+- Make `repokeeper` automatically read `.gitignore` and take its patterns into
+  consideration
+- Support custom invalid file error messages defined in the configuration file,
+  next to each rule
+- Add support for cardinality operators. For example, only allow up to X files
+  that match a certain pattern
+- Add support for defining the file and directory name case. For example, camel
+  case, snake case, etc
+
+Do you have any suggestions? Please [open an
+issue](https://github.com/jviotti/repokeeper/issues/new) on GitHub.
 
 Tests
 -----
