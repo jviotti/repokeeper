@@ -33,10 +33,10 @@ developers*, and it should be treated as such.
 Installation
 ------------
 
-You can install `repokeeper` through `npm`:
+You can install `repokeeper` through `npm` from the GitHub Npm Registry:
 
 ```
-npm install -g repokeeper
+npm install -g @jviotti/repokeeper
 ```
 
 Example

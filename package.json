@@ -1,5 +1,5 @@
 {
-  "name": "repokeeper",
+  "name": "@jviotti/repokeeper",
   "version": "1.0.0",
   "description": "Declaratively define and lint the file and directory structure of a repository",
   "publishConfig": {
