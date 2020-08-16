@@ -25,7 +25,9 @@ node_modules/**/*
 
 # Allow various typical GitHub files
 CODE_OF_CONDUCT.md
+README.md
 LICENSE
+.github/workflows/*.yml
 
 # Allow repokeeper's config file
 .repokeeperrc
