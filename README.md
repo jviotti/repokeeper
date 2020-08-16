@@ -8,14 +8,14 @@ file and directory structure using a declarative definition inspired by
 Philosophy
 ----------
 
-It is widely accepted that developers spend more time reading than writing code
-[^1][^2]. For this reason, established projects typically have a predictable
-file and directory structure to help developers browse and read code. For
-example, test files may be located in a directory called `test` and include a
-`.spec` suffix, while Markdown documentation may be located in subdirectories
-inside a directory called `docs/`. More often than not, these file and
-directory conventions are not automatically enforced, which can become
-problematic on projects involving many collaborators:
+It is widely accepted that developers spend more time reading than writing
+code. For this reason, established projects typically have a predictable file
+and directory structure to help developers browse and read code. For example,
+test files may be located in a directory called `test` and include a `.spec`
+suffix, while Markdown documentation may be located in subdirectories inside a
+directory called `docs/`. More often than not, these file and directory
+conventions are not automatically enforced, which can become problematic on
+projects involving many collaborators:
 
 - **Code review burden**: Maintainers spend more time during the code review
   process to ensure the file structure is preserved
@@ -113,6 +113,7 @@ Future work
   that match a certain pattern
 - Add support for defining the file and directory name case. For example, camel
   case, snake case, etc
+- Become fully compatible with `.gitignore` patterns
 
 Do you have any suggestions? Please [open an
 issue](https://github.com/jviotti/repokeeper/issues/new) on GitHub.
@@ -136,6 +137,3 @@ License
 
 The project is licensed under the [Apache
 2.0](https://github.com/jviotti/repokeeper/blob/master/LICENSE) license.
-
-[^1]: https://www.goodreads.com/quotes/835238-indeed-the-ratio-of-time-spent-reading-versus-writing-is
-[^2]: https://blog.pragmaticengineer.com/readable-code/
